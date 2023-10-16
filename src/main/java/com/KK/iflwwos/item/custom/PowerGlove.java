@@ -21,7 +21,7 @@ public class PowerGlove extends Item {
     {
         return par2ItemStack.isItemEqual(new ItemStack(ModItems.URANIUM_INGOT.get(), 1)) || super.getIsRepairable(par1ItemStack, par2ItemStack);
     }
-
+//coding is fun
     @Override
     public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
         World world = entity.getEntityWorld();
