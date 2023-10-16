@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "iflwwos:block/small_uranium_bomb"
+    },
+    "facing=south": {
+      "model": "iflwwos:block/small_uranium_bomb",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "iflwwos:block/small_uranium_bomb",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "iflwwos:block/small_uranium_bomb",
+      "y": 270
+    }
+  }
+}

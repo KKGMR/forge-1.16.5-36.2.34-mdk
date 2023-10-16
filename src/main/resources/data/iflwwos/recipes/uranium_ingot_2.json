@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "iflwwos:uranium_chunk"
+  },
+  "result": "iflwwos:uranium_ingot",
+  "experience": 5.0,
+  "cookingtime": 250
+}

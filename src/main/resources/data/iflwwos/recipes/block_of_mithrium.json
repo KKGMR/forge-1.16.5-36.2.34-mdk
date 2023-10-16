@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "iflwwos:mithrium"
+    }
+  },
+  "result": {
+    "item": "iflwwos:block_of_mithrium"
+  }
+}

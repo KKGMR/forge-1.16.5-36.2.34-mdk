@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "iflwwos:mithrium_ore"
+  },
+  "result": "iflwwos:mithrium",
+  "experience": 0.5,
+  "cookingtime": 150
+}

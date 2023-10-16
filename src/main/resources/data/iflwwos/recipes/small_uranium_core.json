@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " o ",
+    " # ",
+    "   "
+  ],
+  "key": {
+    "#": {
+      "item": "iflwwos:uranium_ingot"
+  },
+    "o": {
+      "item": "iflwwos:uranium_nuget"
+    }
+    },
+  "result": {
+    "item": "iflwwos:small_uranium_core"
+  }
+}
