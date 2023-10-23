@@ -1,0 +1,9 @@
+{
+  "small_explosion": {
+    "category": "blocks",
+    "subtitle": "iflwwos:small_explosion",
+    "sounds": [
+      "iflwwos:small_explosion"
+    ]
+  }
+}

@@ -1,7 +1,9 @@
 package com.KK.iflwwos.item.custom;
 
 import com.KK.iflwwos.item.ModItems;
+import com.KK.iflwwos.util.ModSoundEvents;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -22,6 +24,12 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class PowerGlove extends Item {
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return false;
+    }
+
 
     @Override
     public boolean showDurabilityBar(ItemStack stack) {
@@ -64,12 +72,12 @@ public class PowerGlove extends Item {
 
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
-
         ItemStack stack = player.getHeldItemMainhand();
-        if ((!world.isRemote) && (getDamage(stack) < 4)) {
+        if ((getDamage(stack) < 4)) {
             charge(player);
-            player.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, 200, 1, false, false));
+            player.playSound(ModSoundEvents.SMALL_EXPLOSION.get(), 7, -5);
             setDamage(stack, getDamage(stack) + 1);
+
         }
         return super.onItemRightClick(world, player, hand);
     }
@@ -88,8 +96,7 @@ public class PowerGlove extends Item {
         double motionZ = (MathHelper.cos(yaw / 180.0F * (float)Math.PI) * MathHelper.cos(pitch / 180.0F * (float)Math.PI) * f);
         double motionY = (-MathHelper.sin((pitch) / 180.0F * (float)Math.PI) * f);
         player.setVelocity(motionX, motionY, motionZ);
-
-
+        player.addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, 200, 1, false, false));
     }
 
 

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "tit",
+    "l#l",
+    "l l"
+  ],
+  "key": {
+    "#": {
+      "item": "iflwwos:block_of_uranium"
+    },
+    "t": {
+      "item": "iflwwos:titanium_ingot"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "l": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "iflwwos:power_glove"
+  }
+}
