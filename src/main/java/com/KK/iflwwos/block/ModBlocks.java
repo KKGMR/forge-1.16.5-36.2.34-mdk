@@ -26,6 +26,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)), ModItemGroup.EXPLOSION_ITEMS );
+
+    public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)), ModItemGroup.BEASTHUNTER_ITEMS );
     public static final RegistryObject<Block> SMALL_URANIUM_BOMB = registerBlock("small_uranium_bomb",
             () -> new SmallUraniumBombBlock(AbstractBlock.Properties.create(Material.IRON)
                     .setRequiresTool().notSolid().hardnessAndResistance(1f)), ModItemGroup.EXPLOSION_ITEMS);

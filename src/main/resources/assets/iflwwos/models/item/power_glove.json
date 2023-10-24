@@ -7,7 +7,7 @@
 		"3": "iflwwos:item/fingers",
 		"4": "iflwwos:item/base",
 		"5": "iflwwos:item/uranium_orbs",
-		"particle": "iflwwos:item/thumbs"
+		"particle": "iflwwos:block/block_of_uranium"
 	},
 	"elements": [
 		{

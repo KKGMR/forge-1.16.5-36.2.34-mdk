@@ -7,7 +7,9 @@ import net.minecraftforge.common.util.Lazy;
 public enum OreType {
 
     MITHRIUM(Lazy.of(ModBlocks.MITHRIUM_ORE), 10, 50, 128),
-    URANIUM(Lazy.of(ModBlocks.URANIUM_ORE), 3, 0, 16);
+    URANIUM(Lazy.of(ModBlocks.URANIUM_ORE), 3, 0, 16),
+
+    TITANIUM(Lazy.of(ModBlocks.TITANIUM_ORE), 8, 1, 64);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;

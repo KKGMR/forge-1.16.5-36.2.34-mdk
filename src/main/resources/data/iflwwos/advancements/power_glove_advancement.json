@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:power_glove"
+    },
+    "title": "Feel The Power",
+    "description": "Get a ВЛАСТЬ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "iflwwos:explosive_advancements",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:power_glove"
+          }
+        ]
+      }
+    }
+  }
+}

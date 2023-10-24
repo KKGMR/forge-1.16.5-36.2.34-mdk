@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:uranium_ingot"
+    },
+    "title": "Ut FRAGOR",
+    "description": "Get a Uranium Ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "iflwwos:textures/block/block_of_uranium.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:uranium_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

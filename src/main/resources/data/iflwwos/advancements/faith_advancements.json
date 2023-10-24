@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:mithrium"
+    },
+    "title": "Faith",
+    "description": "Get Mithrium",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "iflwwos:textures/block/block_of_mithrium.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:mithrium"
+          }
+        ]
+      }
+    }
+  }
+}
