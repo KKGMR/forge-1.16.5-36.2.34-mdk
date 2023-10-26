@@ -2,11 +2,15 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": {
+        "min": 1,
+        "max": 4
+      },
+      "bonus_rolls": 0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "iflwwos:uranium_chunks"
+          "name": "iflwwos:uranium_chunk"
         }
       ]
     }

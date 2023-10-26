@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:small_uranium_bomb"
+    },
+    "title": "KA-BOOOOOOOOOOM",
+    "description": "Craft a Small Uranium Bomb",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "iflwwos:explosive_advancements",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:small_uranium_bomb"
+          }
+        ]
+      }
+    }
+  }
+}

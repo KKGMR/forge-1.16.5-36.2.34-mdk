@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "tit",
+    "i#i",
+    "tit"
+  ],
+  "key": {
+    "#": {
+      "item": "iflwwos:small_uranium_core"
+    },
+    "t": {
+      "item": "iflwwos:titanium_nugget"
+    },
+    "i": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "result": {
+    "item": "iflwwos:small_uranium_bomb"
+  }
+}

@@ -6,6 +6,7 @@ import com.KK.iflwwos.item.ModItemGroup;
 import com.KK.iflwwos.item.ModItems;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -25,11 +26,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> URANIUM_ORE = registerBlock("uranium_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)), ModItemGroup.EXPLOSION_ITEMS );
+                    .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(30.0F, 1200.0F).sound(SoundType.ANCIENT_DEBRIS)), ModItemGroup.EXPLOSION_ITEMS );
 
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                    .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)), ModItemGroup.BEASTHUNTER_ITEMS );
+                    .harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.BEASTHUNTER_ITEMS );
     public static final RegistryObject<Block> SMALL_URANIUM_BOMB = registerBlock("small_uranium_bomb",
             () -> new SmallUraniumBombBlock(AbstractBlock.Properties.create(Material.IRON)
                     .setRequiresTool().notSolid().hardnessAndResistance(1f)), ModItemGroup.EXPLOSION_ITEMS);
@@ -40,7 +41,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MITHRIUM_ORE = registerBlock("mithrium_ore",
         () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
-                .harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(5f)), ModItemGroup.FAITH_ITEMS);
+                .harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.FAITH_ITEMS);
 
     public static final RegistryObject<Block> BLOCK_OF_MITHRIUM = registerBlock("block_of_mithrium",
             () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
