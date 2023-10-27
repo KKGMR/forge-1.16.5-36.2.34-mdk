@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:titanium_ingot"
+    },
+    "title": "BeastHunter",
+    "description": "Get a Titanium Ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "iflwwos:textures/block/block_of_titanium.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:titanium_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

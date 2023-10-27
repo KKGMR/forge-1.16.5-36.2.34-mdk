@@ -4,7 +4,7 @@
 		"0": "iflwwos:block/small_uranium_bomb_body",
 		"1": "iflwwos:block/small_uranium_bomb_extras",
 		"2": "iflwwos:block/small_uranium_bomb_button",
-		"particle": "iflwwos:block/small_uranium_bomb_button"
+		"particle": "iflwwos:block/block_of_uranium"
 	},
 	"elements": [
 		{

@@ -25,6 +25,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.BEASTHUNTER_ITEMS)));
     public static final RegistryObject<Item> URANIUM_NUGET = ITEMS.register("uranium_nugget",
             () -> new Item(new Item.Properties().group(ModItemGroup.EXPLOSION_ITEMS)));
+    public static final RegistryObject<Item> MITHRIUM_NUGET = ITEMS.register("mithrium_nugget",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FAITH_ITEMS)));
     public static final RegistryObject<Item> TITANIUM_NUGET = ITEMS.register("titanium_nugget",
             () -> new Item(new Item.Properties().group(ModItemGroup.BEASTHUNTER_ITEMS)));
     public static final RegistryObject<Item> SMALL_URANIUM_CORE = ITEMS.register("small_uranium_core",

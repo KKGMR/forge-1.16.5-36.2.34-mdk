@@ -38,7 +38,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_URANIUM = registerBlock("block_of_uranium",
             () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)), ModItemGroup.EXPLOSION_ITEMS);
-
+    public static final RegistryObject<Block> BLOCK_OF_TITANIUM = registerBlock("block_of_titanium",
+            () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)), ModItemGroup.BEASTHUNTER_ITEMS);
     public static final RegistryObject<Block> MITHRIUM_ORE = registerBlock("mithrium_ore",
         () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                 .harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.FAITH_ITEMS);
