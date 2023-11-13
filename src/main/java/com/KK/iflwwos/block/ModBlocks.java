@@ -41,9 +41,21 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLOCK_OF_TITANIUM = registerBlock("block_of_titanium",
             () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)), ModItemGroup.BEASTHUNTER_ITEMS);
+    public static final RegistryObject<Block> BLOCK_OF_THERMIUM = registerBlock("block_of_thermium",
+            () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .harvestTool(ToolType.PICKAXE).hardnessAndResistance(5.0F, 6.0F).sound(SoundType.METAL)), ModItemGroup.THERMAL_SLUGGER_ITEMS);
     public static final RegistryObject<Block> MITHRIUM_ORE = registerBlock("mithrium_ore",
         () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                 .harvestLevel(0).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.FAITH_ITEMS);
+    public static final RegistryObject<Block> THERMIUM_ORE = registerBlock("thermium_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.THERMAL_SLUGGER_ITEMS);
+    public static final RegistryObject<Block> HEATED_THERMIUM_ORE = registerBlock("heated_thermium_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F).setLightLevel((state) -> (state.getLightValue() + 3))), ModItemGroup.THERMAL_SLUGGER_ITEMS);
+    public static final RegistryObject<Block> COOLED_THERMIUM_ORE = registerBlock("cooled_thermium_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool().hardnessAndResistance(3.0F, 3.0F)), ModItemGroup.THERMAL_SLUGGER_ITEMS);
 
     public static final RegistryObject<Block> BLOCK_OF_MITHRIUM = registerBlock("block_of_mithrium",
             () -> new Block(AbstractBlock.Properties.create(Material.MISCELLANEOUS)

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "iflwwos:thermium_ingot"
+    }
+  ],
+  "result": {
+    "item": "iflwwos:thermium_nugget",
+    "count": 9
+  }
+}

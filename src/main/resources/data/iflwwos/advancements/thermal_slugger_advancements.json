@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "iflwwos:thermium_ingot"
+    },
+    "title": "Thermal Slugger",
+    "description": "Get a Thermium Ingot",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "iflwwos:textures/block/block_of_thermium.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "iflwwos:thermium_ingot"
+          }
+        ]
+      }
+    }
+  }
+}

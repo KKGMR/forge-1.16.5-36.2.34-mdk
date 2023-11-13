@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "iflwwos:thermium_nugget"
+    }
+  },
+  "result": {
+    "item": "iflwwos:thermium_ingot"
+  }
+}

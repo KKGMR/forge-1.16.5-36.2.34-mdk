@@ -3,14 +3,19 @@ package com.KK.iflwwos.block.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 
@@ -38,8 +43,29 @@ public class SmallUraniumBombBlock extends HorizontalBlock {
     }
 
     @Override
-    public void onBlockClicked(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
-        super.onBlockClicked(state, worldIn, pos, player);
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+
+        if(!worldIn.isRemote) {
+            smallBombExplosion(worldIn, player, pos);
+        }
+        return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+    }
+
+    private void smallBombExplosion(World world, Entity player, BlockPos pos) {
+        world.createExplosion(player, pos.getX(), pos.getY(), pos.getZ(), 4, true, Explosion.Mode.DESTROY);
+        world.removeBlock(pos, false);
+    }
+
+
+    @Override
+    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
+        super.onExplosionDestroy(worldIn, pos, explosionIn);
+    }
+
+    @Override
+    public void onBlockExploded(BlockState state, World world, BlockPos pos, Explosion explosion) {;
+        Entity entity = explosion.getExplosivePlacedBy();
+        smallBombExplosion(world, entity, pos);
     }
 
     @Override

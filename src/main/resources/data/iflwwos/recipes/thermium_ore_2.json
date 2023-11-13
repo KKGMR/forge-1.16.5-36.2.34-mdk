@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "iflwwos:thermium_ore"
+  },
+  "result": "iflwwos:thermium_ingot",
+  "experience": 2,
+  "cookingtime": 150
+}

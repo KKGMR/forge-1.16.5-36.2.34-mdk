@@ -14,6 +14,15 @@ public class ModItemGroup {
         }
     };
 
+    public static final ItemGroup THERMAL_SLUGGER_ITEMS = new ItemGroup("thermalSluggerTab") {
+
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(ModItems.THERMIUM_INGOT.get());
+        }
+    };
+
     public static final ItemGroup EXPLOSION_ITEMS = new ItemGroup("explosionTab") {
 
         @Override

@@ -63,7 +63,8 @@ public class PowerGlove extends Item {
     @Override
     public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity) {
         World world = entity.getEntityWorld();
-        if ((getDamage(stack) < 4)) {particleRing(world, entity);}
+        if ((getDamage(stack) < 4)) {particleRing(world, entity, 10);}
+        player.getCooldownTracker().setCooldown(stack.getItem(), 20);
         if ((!world.isRemote) && (getDamage(stack) < 4)) {
             ExplosionContext explosionContext = null;
             DamageSource damageSource = DamageSource.causePlayerDamage(player);
@@ -80,6 +81,8 @@ public class PowerGlove extends Item {
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, Hand hand) {
         ItemStack stack = player.getHeldItemMainhand();
         if ((getDamage(stack) < 4)) {
+            player.getCooldownTracker().setCooldown(stack.getItem(), 20);
+            particleRing(world, player, 3);
             charge(player);
             player.playSound(ModSoundEvents.SMALL_EXPLOSION.get(), 7, -5);
             setDamage(stack, getDamage(stack) + 1);
@@ -90,12 +93,12 @@ public class PowerGlove extends Item {
 
 
     private void explode(World world, PlayerEntity player, DamageSource damageSource, ExplosionContext explosionContext, Entity entity) {
-        Explosion.Mode blockInteraction = null;
+        Explosion.Mode blockInteraction = Explosion.Mode.BREAK;
         world.createExplosion(player, damageSource, explosionContext, entity.getPosX(),entity.getPosY(), entity.getPosZ(), 8.0F, false, blockInteraction);
     }
 
-    private void particleRing(World world, Entity entity) {
-        for (int i = 0; i < 3600; i++) {
+    private void particleRing(World world, Entity entity, int amount) {
+        for (int i = 0; i < 360 * amount; i++) {
             int choiceX = rand.nextInt(2);
             int choiceZ = rand.nextInt(2);
             int choiceY = rand.nextInt(2);
