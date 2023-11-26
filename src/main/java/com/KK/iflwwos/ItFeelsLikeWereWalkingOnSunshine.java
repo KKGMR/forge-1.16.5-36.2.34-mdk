@@ -2,6 +2,7 @@ package com.KK.iflwwos;
 
 import com.KK.iflwwos.block.ModBlocks;
 import com.KK.iflwwos.effect.ModEffects;
+import com.KK.iflwwos.entity.ModEntityTypes;
 import com.KK.iflwwos.item.ModItems;
 import com.KK.iflwwos.potion.ModPotions;
 import com.KK.iflwwos.util.ModSoundEvents;
@@ -44,6 +45,7 @@ public class ItFeelsLikeWereWalkingOnSunshine
         ModSoundEvents.register(eventBus);
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
+        ModEntityTypes.register(eventBus);
 
 
         eventBus.addListener(this::setup);

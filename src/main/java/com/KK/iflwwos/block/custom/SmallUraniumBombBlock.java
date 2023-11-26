@@ -4,6 +4,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.item.TNTEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
@@ -51,23 +54,21 @@ public class SmallUraniumBombBlock extends HorizontalBlock {
         return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
     }
 
-    private void smallBombExplosion(World world, Entity player, BlockPos pos) {
-        world.createExplosion(player, pos.getX(), pos.getY(), pos.getZ(), 4, true, Explosion.Mode.DESTROY);
+    private void smallBombExplosion(World world, LivingEntity player, BlockPos pos) {
+        TNTEntity bomb = new TNTEntity(world, (double) pos.getX() + 0.5D, (double) pos.getY() + 0.5D, (double) pos.getZ() + 0.5D, player);
+        world.addEntity(bomb);
         world.removeBlock(pos, false);
     }
 
 
     @Override
-    public void onExplosionDestroy(World worldIn, BlockPos pos, Explosion explosionIn) {
-        super.onExplosionDestroy(worldIn, pos, explosionIn);
-    }
-
-    @Override
     public void onBlockExploded(BlockState state, World world, BlockPos pos, Explosion explosion) {;
-        Entity entity = explosion.getExplosivePlacedBy();
-        smallBombExplosion(world, entity, pos);
-    }
+        if (!world.isRemote) {
+            LivingEntity entity = explosion.getExplosivePlacedBy();
+            smallBombExplosion(world, entity, pos);
+        }
 
+    }
     @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING);
